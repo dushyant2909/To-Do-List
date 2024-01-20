@@ -7,7 +7,7 @@ function App() {
   const [theme, settheme] = useState("dark");
 
   const addTodo = (todo) => {
-    setTodos((oldtodos) => [{ id: Date.now(), ...todo }, ...oldtodos]);
+    setTodos((oldtodos) => [...oldtodos, { id: Date.now(), ...todo }]);
     // setTodos(todo) then all prev todos will be lost.
   }
 
